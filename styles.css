@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #111, #400000);
+    color: white;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.watch-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.watch-btn:hover {
+    background: darkred;
+}
+
+/* Movie Slider */
+.slider-container {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+.movie-slider {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.movie {
+    min-width: 200px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Genres Section */
+.genres {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.genres ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.genres ul li a {
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.genres ul li a:hover {
+    color: white;
+}
+
+/* New Releases & Series Section */
+.new-releases, .series {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.movie-list img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.movie-list img:hover {
+    transform: scale(1.1);
+}
